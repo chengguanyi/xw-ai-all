@@ -1,14 +1,12 @@
 package com.xuanwu.ai.views;
 
-import lombok.Getter;
-import lombok.ToString;
+import com.xuanwu.ai.support.MyThreadContext;
 import org.springframework.http.HttpStatus;
 
-@Getter
-@ToString
+
 public class ResponseVo<T> {
 
-    private Integer code = HttpStatus.OK.value();
+    private String code = String.valueOf(HttpStatus.OK.value());
     private String message = "success";
     private T data;
     private String traceId;
@@ -34,26 +32,47 @@ public class ResponseVo<T> {
         return new ResponseVo<>(data);
     }
 
-    public static <T> ResponseVo<T> fail(Integer code) {
+    public static <T> ResponseVo<T> fail(String code) {
         ResponseVo<T> responseVo = new ResponseVo<>();
         responseVo.code = code;
         responseVo.message = "fail";
         return responseVo;
     }
-    public static <T> ResponseVo<T> fail(Integer code, String message) {
+    public static <T> ResponseVo<T> fail(String code, String message) {
         ResponseVo<T> responseVo = new ResponseVo<>();
         responseVo.code = code;
         responseVo.message = message;
         return responseVo;
     }
-    public static <T> ResponseVo<T> fail(Integer code, T data, String message) {
+    public static <T> ResponseVo<T> fail(String code, T data, String message) {
         ResponseVo<T> responseVo = new ResponseVo<>(data, message);
         responseVo.code = code;
         return responseVo;
     }
 
-    public static void main(String[] args) {
-        System.out.println(new ResponseVo<>());
+    public String getCode() {
+        return code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public String getTraceId() {
+        traceId = MyThreadContext.getTraceId();
+        return traceId;
+    }
+
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public boolean isSuccess() {
+        return null != this.getCode() && String.valueOf(HttpStatus.OK.value()).equals(this.getCode());
     }
 
 }

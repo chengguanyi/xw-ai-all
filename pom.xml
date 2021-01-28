@@ -6,6 +6,8 @@
 
     <modules>
         <module>xw-ai-web-starter</module>
+        <module>xw-ai-core</module>
+        <module>xw-ai-web-demo</module>
     </modules>
 
     <parent>
@@ -27,6 +29,8 @@
         <p6spy.version>1.6.2</p6spy.version>
         <mybatis-plus.version>3.4.0</mybatis-plus.version>
         <lombok.version>1.18.16</lombok.version>
+        <common-lang3.version>3.11</common-lang3.version>
+        <slf4.version>1.7.24</slf4.version>
     </properties>
 
     <!-- 版本统一管理 -->
@@ -63,6 +67,19 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${common-lang3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4.version}</version>
+            </dependency>
+
 
 
         </dependencies>
