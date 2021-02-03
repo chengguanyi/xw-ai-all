@@ -8,6 +8,7 @@
         <module>xw-ai-web-starter</module>
         <module>xw-ai-core</module>
         <module>xw-ai-web-demo</module>
+        <module>xw-ai-tx</module>
     </modules>
 
     <parent>

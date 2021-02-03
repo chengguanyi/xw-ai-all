@@ -9,25 +9,20 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>xw-ai-web-demo</artifactId>
+    <artifactId>xw-ai-tx</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <description>测试模块</description>
+    <description>事务模块</description>
+
 
     <dependencies>
         <dependency>
-            <groupId>org.xuanwu.ai</groupId>
-            <artifactId>xw-ai-base-starter</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>org.xuanwu.ai</groupId>
-            <artifactId>xw-ai-tx</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
         </dependency>
-
     </dependencies>
 
 
