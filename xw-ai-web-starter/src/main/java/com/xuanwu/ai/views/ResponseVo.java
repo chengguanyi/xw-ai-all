@@ -1,5 +1,6 @@
 package com.xuanwu.ai.views;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.xuanwu.ai.support.MyThreadContext;
 import org.springframework.http.HttpStatus;
 
@@ -71,6 +72,7 @@ public class ResponseVo<T> {
         return timestamp;
     }
 
+    @JsonIgnore
     public boolean isSuccess() {
         return null != this.getCode() && String.valueOf(HttpStatus.OK.value()).equals(this.getCode());
     }

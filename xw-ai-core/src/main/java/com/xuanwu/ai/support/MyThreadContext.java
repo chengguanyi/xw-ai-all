@@ -12,6 +12,7 @@ public class MyThreadContext {
     private static final Logger log = LoggerFactory.getLogger(MyThreadContext.class);
 
     public final static String MDC_TRACE_ID = "traceId";
+   // public final static String MDC_USER_ID = "userId";
     public final static String MDC_TENANT_ID = "tenantId";
     public final static String MDC_LOG_LEVEL = "logLevel";
     public static final String TRACE_ID = MyThreadContext.class.getName() + "_TRACE_ID_KEY";
