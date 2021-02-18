@@ -32,6 +32,7 @@
         <lombok.version>1.18.16</lombok.version>
         <common-lang3.version>3.11</common-lang3.version>
         <slf4.version>1.7.24</slf4.version>
+        <swagger.version>2.9.2</swagger.version>
     </properties>
 
     <!-- 版本统一管理 -->
@@ -81,6 +82,16 @@
                 <version>${slf4.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
 
 
         </dependencies>

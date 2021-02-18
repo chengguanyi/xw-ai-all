@@ -8,15 +8,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
 @Slf4j
+@RestController
 public class TestController {
 
     @GetMapping("/test")
     public ResponseVo<User> getUser(@Validated @RequestParam("name") String name){
 
         log.info("name:{}",name);
-
         User user = new User();
         user.setUserName("chengguanhui");
         user.setPassword("123456");
