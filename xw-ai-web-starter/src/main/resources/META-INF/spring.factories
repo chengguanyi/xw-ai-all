@@ -3,4 +3,5 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   com.xuanwu.ai.config.CorsAutoConfigure,\
   com.xuanwu.ai.config.FilterAutoConfigure,\
   com.xuanwu.ai.config.TomcatConfigure,\
+  com.xuanwu.ai.config.Swagger2Config,\
   com.xuanwu.ai.config.InterceptorAutoConfigure

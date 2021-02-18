@@ -39,11 +39,10 @@ public class Swagger2Config extends WebMvcConfigurationSupport {
 
 
     private ApiInfo apiInfo() {
-        Contact contact = new Contact("玄武", "", "AI@xuanwu.com");
+        //Contact contact = new Contact("玄武", "", "AI@xuanwu.com");
         return new ApiInfoBuilder()
-                .title("SwaggerUI演示")
-                .description("接口文档")
-                .contact(contact)
+                .title("xw-ai 接口文档")
+                .description("用于接口测试")
                 .version("1.0")
                 .build();
     }
